@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>山河</title>
   
-  <link href="/atom.xml" rel="self"/>
+  <link href="/article/atom.xml" rel="self"/>
   
   <link href="/"/>
   <updated>2016-10-09T12:13:39.000Z</updated>
