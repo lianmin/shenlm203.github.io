@@ -4,16 +4,16 @@
   
   <link href="/article/atom.xml" rel="self"/>
   
-  <link href="/"/>
+  <link href="/article/"/>
   <updated>2016-10-09T12:13:39.000Z</updated>
-  <id>/</id>
+  <id>/article/</id>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
     <title>editorconfig 使用</title>
-    <link href="/2016/10/09/editorconfig-1/"/>
-    <id>/2016/10/09/editorconfig-1/</id>
+    <link href="/article/2016/10/09/editorconfig-1/"/>
+    <id>/article/2016/10/09/editorconfig-1/</id>
     <published>2016-10-09T12:13:06.000Z</published>
     <updated>2016-10-09T12:13:39.000Z</updated>
     
@@ -97,14 +97,14 @@ indent_size = 4
     </summary>
     
     
-      <category term="editorconfig" scheme="/tags/editorconfig/"/>
+      <category term="editorconfig" scheme="/article/tags/editorconfig/"/>
     
   </entry>
   
   <entry>
     <title>editorconfig 使用</title>
-    <link href="/2016/10/09/editorconfig/"/>
-    <id>/2016/10/09/editorconfig/</id>
+    <link href="/article/2016/10/09/editorconfig/"/>
+    <id>/article/2016/10/09/editorconfig/</id>
     <published>2016-10-09T02:10:53.000Z</published>
     <updated>2016-10-09T02:11:31.000Z</updated>
     
@@ -192,8 +192,8 @@ indent_size = 4
   
   <entry>
     <title>Hello World</title>
-    <link href="/2016/10/09/hello-world/"/>
-    <id>/2016/10/09/hello-world/</id>
+    <link href="/article/2016/10/09/hello-world/"/>
+    <id>/article/2016/10/09/hello-world/</id>
     <published>2016-10-09T01:56:59.000Z</published>
     <updated>2016-10-09T11:43:05.000Z</updated>
     
