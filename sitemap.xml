@@ -2,23 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>/article/article/2016/10/09/editorconfig-1/</loc>
+    <loc>/tags/index.html</loc>
     
-    <lastmod>2016-10-09T12:13:39.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>/article/article/2016/10/09/hello-world/</loc>
-    
-    <lastmod>2016-10-09T11:43:05.000Z</lastmod>
+    <lastmod>2016-10-11T13:02:38.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>/article/article/2016/10/09/editorconfig/</loc>
+    <loc>/categories/index.html</loc>
     
-    <lastmod>2016-10-09T02:11:31.000Z</lastmod>
+    <lastmod>2016-10-11T12:59:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/about/index.html</loc>
+    
+    <lastmod>2016-10-11T12:58:10.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/2016/10/09/editorconfig/</loc>
+    
+    <lastmod>2016-10-11T11:57:12.000Z</lastmod>
     
   </url>
   
