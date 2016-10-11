@@ -6,33 +6,7 @@
     <entry>
       <title><![CDATA[editorconfig 使用]]></title>
       <url>/2016/10/09/editorconfig/</url>
-      <content type="html"><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>由于团队成员开发经历、熟悉的编辑器及开发习惯等的不同，在协作开发的时候往往会遇到许多因代码风格而引起的尴尬问题。比如，协作开发过程中各成员之间代码一致，只是因tab缩进，行尾换行符，多余空格等而差异导致VCS产生了冲突。</p>
-<p>Editorconfig是一款帮助开发者在不同编辑器或IDE之间定义和保持代码风格的工具。它包含了两部分内容：代码风格规则定义&amp;支持此规则的一系列编辑器插件。</p>
-<p>本文根据<a href="http://editorconfig.org/" target="_blank" rel="external">editorconfig</a>官网的内容，结合常规开发所能遇到的情况，为大家介绍一下其用法。</p>
-<h1 id="Editorconfig的特点"><a href="#Editorconfig的特点" class="headerlink" title="Editorconfig的特点:"></a>Editorconfig的特点:</h1><ul>
-<li>支持一套统一的代码风格</li>
-<li>跨编辑器</li>
-<li>配置简单、快捷</li>
-</ul>
-<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h2 id="1-通配符匹配规则"><a href="#1-通配符匹配规则" class="headerlink" title="1.通配符匹配规则"></a>1.通配符匹配规则</h2><p><img src="http://img2.tbcdn.cn/L1/461/1/8ff064efe987e13471cf8b58b48a0c2aa8c65390" alt=""></p>
-<ul>
-<li><p>[] 匹配规则是从当前目录算起;</p>
-</li>
-<li><p>?只能匹配且必须有    如<code>f1.js</code>、<code>f2.js</code>、<code>f12.js</code>通过f??.js只能匹配到 <code>f12.js</code>，而f**.js可以匹配到所有;</p>
-</li>
-<li><p>{s1,s2,s3}之间不能有空格。[{f1.js, f2.js, f3.js}] 无法匹配<code>f2.js</code>,<code>f3.js</code>;</p>
-</li>
-<li><p><code>*</code>和<code>**</code>可以匹配空字符串   如<code>f*.js</code>可以匹配<code>f.js</code></p>
-</li>
-<li><p>多个匹配之间的规则如果不冲突是可以合并的</p>
-</li>
-<li><p>优先级问题（有点类似于css ）</p>
-<p>  如果两个匹配所定义的规则冲突，则会以最靠近打开文件的<code>.editorconfig</code>文件为准;</p>
-<p>  如果同一个文件中匹配定义冲突，则会以最后定义的为准。所以在定义规则的时候，须先定义通用规则，后定义特殊规则。</p>
-</li>
-</ul>
-<h2 id="2-支持属性"><a href="#2-支持属性" class="headerlink" title="2.支持属性"></a>2.支持属性</h2><p><img src="http://img2.tbcdn.cn/L1/461/1/2164cf30b5e2dd3413dabe440abcf0dc135d6fd4" alt=""></p>
-<pre><code>注：
+      <content type="html"><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>由于团队成员开发经历、熟悉的编辑器及开发习惯等的不同，在协作开发的时候往往会遇到许多因代码风格而引起的尴尬问题。比如，协作开发过程中各成员之间代码一致，只是因tab缩进，行尾换行符，多余空格等而差异导致VCS产生了冲突。</p><p>Editorconfig是一款帮助开发者在不同编辑器或IDE之间定义和保持代码风格的工具。它包含了两部分内容：代码风格规则定义&amp;支持此规则的一系列编辑器插件。</p><p>本文根据<a href="http://editorconfig.org/" target="_blank" rel="external">editorconfig</a>官网的内容，结合常规开发所能遇到的情况，为大家介绍一下其用法。</p><h1 id="Editorconfig的特点"><a href="#Editorconfig的特点" class="headerlink" title="Editorconfig的特点:"></a>Editorconfig的特点:</h1><ul><li>支持一套统一的代码风格</li><li>跨编辑器</li><li>配置简单、快捷</li></ul><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h2 id="1-通配符匹配规则"><a href="#1-通配符匹配规则" class="headerlink" title="1.通配符匹配规则"></a>1.通配符匹配规则</h2><p><img src="http://img2.tbcdn.cn/L1/461/1/8ff064efe987e13471cf8b58b48a0c2aa8c65390" alt=""></p><ul><li><p>[] 匹配规则是从当前目录算起;</p></li><li><p>?只能匹配且必须有 如<code>f1.js</code>、<code>f2.js</code>、<code>f12.js</code>通过f??.js只能匹配到 <code>f12.js</code>，而f**.js可以匹配到所有;</p></li><li><p>{s1,s2,s3}之间不能有空格。[{f1.js, f2.js, f3.js}] 无法匹配<code>f2.js</code>,<code>f3.js</code>;</p></li><li><p><code>*</code>和<code>**</code>可以匹配空字符串 如<code>f*.js</code>可以匹配<code>f.js</code></p></li><li><p>多个匹配之间的规则如果不冲突是可以合并的</p></li><li><p>优先级问题（有点类似于css ）</p><p>如果两个匹配所定义的规则冲突，则会以最靠近打开文件的<code>.editorconfig</code>文件为准;</p><p>如果同一个文件中匹配定义冲突，则会以最后定义的为准。所以在定义规则的时候，须先定义通用规则，后定义特殊规则。</p></li></ul><h2 id="2-支持属性"><a href="#2-支持属性" class="headerlink" title="2.支持属性"></a>2.支持属性</h2><p><img src="http://img2.tbcdn.cn/L1/461/1/2164cf30b5e2dd3413dabe440abcf0dc135d6fd4" alt=""></p><pre><code>注：
 
 1.所有属性设置大小写敏感，使用小写；
 
@@ -43,28 +17,7 @@
     查找顺序从根目录（或root=true文件夹）到当前目录，最接近当前打开文件的.editorconfig会最后被读取，这些文件中所设置的属性越靠近当前打开文件，优先级越高
 
 3.Windows中由于扩展规则限制，可通过输入&apos;.editorconfig.&apos;生成配置文件
-</code></pre><h1 id="常用IDE下载链接"><a href="#常用IDE下载链接" class="headerlink" title="常用IDE下载链接"></a>常用IDE下载链接</h1><ul>
-<li>Notepad++:        <a href="https://github.com/editorconfig/editorconfig-notepad-plus-plus#readme" target="_blank" rel="external">https://github.com/editorconfig/editorconfig-notepad-plus-plus#readme</a> </li>
-<li>Sublime Text:     <a href="https://github.com/sindresorhus/editorconfig-sublime#readme" target="_blank" rel="external">https://github.com/sindresorhus/editorconfig-sublime#readme</a> </li>
-<li>jetBrains:        <a href="https://github.com/editorconfig/editorconfig-jetbrains#readme" target="_blank" rel="external">https://github.com/editorconfig/editorconfig-jetbrains#readme</a> </li>
-<li>Vim:              <a href="https://github.com/editorconfig/editorconfig-vim#readme" target="_blank" rel="external">https://github.com/editorconfig/editorconfig-vim#readme</a> </li>
-<li>TextMate:         <a href="https://github.com/Mr0grog/editorconfig-textmate#readme" target="_blank" rel="external">https://github.com/Mr0grog/editorconfig-textmate#readme</a> </li>
-<li>Code::Blocks:     <a href="https://github.com/editorconfig/editorconfig-codeblocks#readme" target="_blank" rel="external">https://github.com/editorconfig/editorconfig-codeblocks#readme</a></li>
-</ul>
-<p>支持的所有编辑器列表：</p>
-<p><img src="http://img1.tbcdn.cn/L1/461/1/489199d957111c45266a70bcaadd6c7948fc3874" alt=""></p>
-<h1 id="安装举例"><a href="#安装举例" class="headerlink" title="安装举例"></a>安装举例</h1><h2 id="jetbrains-包括Intellij-IDEA-和-webstrom-安装"><a href="#jetbrains-包括Intellij-IDEA-和-webstrom-安装" class="headerlink" title="jetbrains (包括Intellij IDEA 和 webstrom) 安装"></a>jetbrains (包括Intellij IDEA 和 webstrom) 安装</h2><p>1.打开settings-&gt;plugins</p>
-<p><img src="http://img1.tbcdn.cn/L1/461/1/a1604177cd0809806e7955a31819bbd725ac80d6" alt=""></p>
-<p>2.选择从本地磁盘安装</p>
-<p><img src="http://img3.tbcdn.cn/L1/461/1/561e88eabc007dbfa0e02b5a7bd7ed9c3d1ab614" alt=""></p>
-<p>3.选择安装插件[见附件]</p>
-<h2 id="sublime-text安装"><a href="#sublime-text安装" class="headerlink" title="sublime text安装"></a>sublime text安装</h2><p>通过<code>package control</code> 输入 editorcofnig 查找安装即可</p>
-<p><img src="http://img4.tbcdn.cn/L1/461/1/337f656447eb81ee0a7f24e3e15cb52171d65ff4" alt=""></p>
-<h2 id="notepad-安装"><a href="#notepad-安装" class="headerlink" title="notepad ++ 安装"></a>notepad ++ 安装</h2><p>1.打开插件管理</p>
-<p><img src="http://img3.tbcdn.cn/L1/461/1/f8f4c685688183d5f08b2002b94e036aa0eb4dc8" alt=""></p>
-<p>2.找到<code>editorconfig</code>,直接安装即可</p>
-<h1 id="editor配置示例"><a href="#editor配置示例" class="headerlink" title="editor配置示例"></a>editor配置示例</h1><p>将.editorconfig文件(内容如下)放到项目根目录，并且对自己的IDE安装相应支持的插件即可。</p>
-<pre><code># editorconfig文件定义一致的code style规范
+</code></pre><h1 id="常用IDE下载链接"><a href="#常用IDE下载链接" class="headerlink" title="常用IDE下载链接"></a>常用IDE下载链接</h1><ul><li>Notepad++: <a href="https://github.com/editorconfig/editorconfig-notepad-plus-plus#readme" target="_blank" rel="external">https://github.com/editorconfig/editorconfig-notepad-plus-plus#readme</a></li><li>Sublime Text: <a href="https://github.com/sindresorhus/editorconfig-sublime#readme" target="_blank" rel="external">https://github.com/sindresorhus/editorconfig-sublime#readme</a></li><li>jetBrains: <a href="https://github.com/editorconfig/editorconfig-jetbrains#readme" target="_blank" rel="external">https://github.com/editorconfig/editorconfig-jetbrains#readme</a></li><li>Vim: <a href="https://github.com/editorconfig/editorconfig-vim#readme" target="_blank" rel="external">https://github.com/editorconfig/editorconfig-vim#readme</a></li><li>TextMate: <a href="https://github.com/Mr0grog/editorconfig-textmate#readme" target="_blank" rel="external">https://github.com/Mr0grog/editorconfig-textmate#readme</a></li><li>Code::Blocks: <a href="https://github.com/editorconfig/editorconfig-codeblocks#readme" target="_blank" rel="external">https://github.com/editorconfig/editorconfig-codeblocks#readme</a></li></ul><p>支持的所有编辑器列表：</p><p><img src="http://img1.tbcdn.cn/L1/461/1/489199d957111c45266a70bcaadd6c7948fc3874" alt=""></p><h1 id="安装举例"><a href="#安装举例" class="headerlink" title="安装举例"></a>安装举例</h1><h2 id="jetbrains-包括Intellij-IDEA-和-webstrom-安装"><a href="#jetbrains-包括Intellij-IDEA-和-webstrom-安装" class="headerlink" title="jetbrains (包括Intellij IDEA 和 webstrom) 安装"></a>jetbrains (包括Intellij IDEA 和 webstrom) 安装</h2><p>1.打开settings-&gt;plugins</p><p><img src="http://img1.tbcdn.cn/L1/461/1/a1604177cd0809806e7955a31819bbd725ac80d6" alt=""></p><p>2.选择从本地磁盘安装</p><p><img src="http://img3.tbcdn.cn/L1/461/1/561e88eabc007dbfa0e02b5a7bd7ed9c3d1ab614" alt=""></p><p>3.选择安装插件[见附件]</p><h2 id="sublime-text安装"><a href="#sublime-text安装" class="headerlink" title="sublime text安装"></a>sublime text安装</h2><p>通过<code>package control</code> 输入 editorcofnig 查找安装即可</p><p><img src="http://img4.tbcdn.cn/L1/461/1/337f656447eb81ee0a7f24e3e15cb52171d65ff4" alt=""></p><h2 id="notepad-安装"><a href="#notepad-安装" class="headerlink" title="notepad ++ 安装"></a>notepad ++ 安装</h2><p>1.打开插件管理</p><p><img src="http://img3.tbcdn.cn/L1/461/1/f8f4c685688183d5f08b2002b94e036aa0eb4dc8" alt=""></p><p>2.找到<code>editorconfig</code>,直接安装即可</p><h1 id="editor配置示例"><a href="#editor配置示例" class="headerlink" title="editor配置示例"></a>editor配置示例</h1><p>将.editorconfig文件(内容如下)放到项目根目录，并且对自己的IDE安装相应支持的插件即可。</p><pre><code># editorconfig文件定义一致的code style规范
 # 根据不同的开发IDE或编辑器统一代码风格
 # 详情见 editorconfig.org
 root = true
