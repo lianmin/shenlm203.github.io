@@ -2,14 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>山河小记</title>
   <subtitle>专业、激情、勤奋、坚持</subtitle>
-  <link href="/article/atom.xml" rel="self"/>
+  <link href="/atom.xml" rel="self"/>
   
-  <link href="/article/"/>
+  <link href="/"/>
   <updated>2016-10-11T11:57:12.000Z</updated>
-  <id>/article/</id>
+  <id>/</id>
   
   <author>
-    <name>山河</name>
+    <name>联民</name>
     <email>406400939@qq.com</email>
   </author>
   
@@ -17,8 +17,8 @@
   
   <entry>
     <title>editorconfig 使用</title>
-    <link href="/article/2016/10/09/editorconfig/"/>
-    <id>/article/2016/10/09/editorconfig/</id>
+    <link href="/2016/10/09/editorconfig/"/>
+    <id>/2016/10/09/editorconfig/</id>
     <published>2016-10-09T12:13:06.000Z</published>
     <updated>2016-10-11T11:57:12.000Z</updated>
     
@@ -54,12 +54,12 @@ indent_size = 4
     
     </summary>
     
-      <category term="Web前端" scheme="/article/categories/Web%E5%89%8D%E7%AB%AF/"/>
+      <category term="Web前端" scheme="/categories/Web%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="editorconfig" scheme="/article/tags/editorconfig/"/>
+      <category term="editorconfig" scheme="/tags/editorconfig/"/>
     
-      <category term="代码质量" scheme="/article/tags/%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F/"/>
+      <category term="代码质量" scheme="/tags/%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F/"/>
     
   </entry>
   
