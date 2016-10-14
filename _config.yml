@@ -5,8 +5,8 @@
 # Site
 title: 山河小记
 subtitle: 专业、激情、勤奋、坚持
-description: 山河的前端博客
-author: 山河
+description: 联民的前端博客
+author: 联民
 email: 406400939@qq.com
 
 language: zh-Hans
@@ -14,8 +14,8 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: /article
-root: /article
+url: /
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -79,8 +79,8 @@ duoshuo_shortname: lianmin
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:shenlm203/article.git
-  branch: gh-pages
+  repo: git@github.com:shenlm203/shenlm203.github.io.git
+  branch: master
 
 plugins: #插件，例如生成 RSS 和站点地图的
 #- hexo-generator-feed
