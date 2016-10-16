@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2016-10-16T03:41:20.000Z</updated>
+  <updated>2016-10-16T05:19:09.000Z</updated>
   <id>/</id>
   
   <author>
@@ -14,6 +14,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>优化hexo打包后的代码</title>
+    <link href="/2016/10/09/hexo-gulpfile/"/>
+    <id>/2016/10/09/hexo-gulpfile/</id>
+    <published>2016-10-09T12:13:06.000Z</published>
+    <updated>2016-10-16T05:19:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>我们都知道<code>hexo</code>执行<code>hexo g</code>命令之后 ，会生成<code>/public</code>文件夹， 这是我们最终将要发布到线上的最终内容。 而由于各个hexo的主题中质量不一致，让<code>/public</code>文件夹还会有一定的优化空间， 我们需要对此文件夹进行一次基本的前端优化：</p>
+<ul>
+<li>压缩图片</li>
+<li>html 压缩</li>
+<li>css 压缩</li>
+<li>js 压缩</li>
+</ul>
+<p>本文总结一个试验后的可行方法。</p>
+<h2 id="1-安装依赖"><a href="#1-安装依赖" class="headerlink" title="1. 安装依赖"></a>1. 安装依赖</h2><p>建议安装淘宝的<a href="https://npm.taobao.org/" target="_blank" rel="external">cnpm</a>提速。</p>
+<blockquote>
+<p>(c)npm i gulp gulp gulp-uglify gulp-minify-css gulp-htmlmin gulp-minify-inline gulp-imagemin –save-dev</p>
+</blockquote>
+<h2 id="2-创建gulpfile-js"><a href="#2-创建gulpfile-js" class="headerlink" title="2. 创建gulpfile.js"></a>2. 创建gulpfile.js</h2><p>在hexo blog文件夹下创建<code>gulpfile.js</code>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span></div><div class="line">  gulp         = <span class="built_in">require</span>(<span class="string">'gulp'</span>),</div><div class="line">  uglify       = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>),</div><div class="line">  cssmin       = <span class="built_in">require</span>(<span class="string">'gulp-minify-css'</span>),</div><div class="line">  htmlmin      = <span class="built_in">require</span>(<span class="string">'gulp-htmlmin'</span>),</div><div class="line">  minifyInline = <span class="built_in">require</span>(<span class="string">'gulp-minify-inline'</span>),</div><div class="line">  imagemin     = <span class="built_in">require</span>(<span class="string">'gulp-imagemin'</span>);</div><div class="line"></div><div class="line"><span class="comment">//JS压缩</span></div><div class="line">gulp.task(<span class="string">'uglify'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> gulp.src(<span class="string">'././public/**/*.js'</span>)</div><div class="line">    .pipe(uglify())</div><div class="line">    .pipe(gulp.dest(<span class="string">'././public/'</span>));</div><div class="line">&#125;);</div><div class="line"><span class="comment">//CSS压缩</span></div><div class="line">gulp.task(<span class="string">'cssmin'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> gulp.src(<span class="string">'././public/**/*.css'</span>)</div><div class="line">    .pipe(cssmin())</div><div class="line">    .pipe(gulp.dest(<span class="string">'././public/'</span>));</div><div class="line">&#125;);</div><div class="line"><span class="comment">//图片压缩</span></div><div class="line">gulp.task(<span class="string">'images'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  gulp.src(<span class="string">'././public/*.*'</span>)</div><div class="line">    .pipe(imagemin(&#123;</div><div class="line">      <span class="attr">progressive</span>: <span class="literal">false</span></div><div class="line">    &#125;))</div><div class="line">    .pipe(gulp.dest(<span class="string">'././public/'</span>));</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//html压缩</span></div><div class="line">gulp.task(<span class="string">'htmlmin'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> gulp.src(<span class="string">'././public/**/*.html'</span>)</div><div class="line">    .pipe(htmlmin(&#123;<span class="attr">collapseWhitespace</span>: <span class="literal">true</span>&#125;))</div><div class="line">    .pipe(minifyInline())</div><div class="line">    .pipe(gulp.dest(<span class="string">'././public/'</span>));</div><div class="line">&#125;)</div><div class="line"></div><div class="line">gulp.task(<span class="string">'build'</span>, [<span class="string">'uglify'</span>, <span class="string">'cssmin'</span>, <span class="string">'images'</span>, <span class="string">'htmlmin'</span>]);</div></pre></td></tr></table></figure>
+<h3 id="3-执行优化命令"><a href="#3-执行优化命令" class="headerlink" title="3. 执行优化命令"></a>3. 执行优化命令</h3><p>清空hexo public文件夹</p>
+<blockquote>
+<p>hexo clean<br>hexo g<br>gulp build</p>
+</blockquote>
+<p>连续执行3个命令太麻烦， 可以直接在<code>package.json</code>文件中生成写入<code>scripts</code>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">  <span class="string">"build"</span>: <span class="string">"hexo clean &amp;&amp; hexo g &amp;&amp; gulp build"</span></div><div class="line">&#125;</div><div class="line">...</div></pre></td></tr></table></figure>
+<p>然后直接执行如下命令就可以了</p>
+<blockquote>
+<p>npm run build</p>
+</blockquote>
+<p>至此，可以得到一个html、css、js、image都更优化的<code>/public</code>文件夹，最后再用各种评测工具测试一下你的博客打开速度吧！~</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我们都知道&lt;code&gt;hexo&lt;/code&gt;执行&lt;code&gt;hexo g&lt;/code&gt;命令之后 ，会生成&lt;code&gt;/public&lt;/code&gt;文件夹， 这是我们最终将要发布到线上的最终内容。 而由于各个hexo的主题中质量不一致，让&lt;code&gt;/public&lt;/code&gt;
+    
+    </summary>
+    
+      <category term="小记" scheme="/categories/%E5%B0%8F%E8%AE%B0/"/>
+    
+    
+      <category term="hexo" scheme="/tags/hexo/"/>
+    
+      <category term="gulpfile" scheme="/tags/gulpfile/"/>
+    
+      <category term="hexo minify" scheme="/tags/hexo-minify/"/>
+    
+  </entry>
   
   <entry>
     <title>editorconfig 使用</title>
