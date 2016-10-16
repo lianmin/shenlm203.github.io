@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/2016/10/09/editorconfig/</loc>
+    
+    <lastmod>2016-10-14T12:25:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>/tags/index.html</loc>
     
     <lastmod>2016-10-11T13:02:38.000Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>/about/index.html</loc>
     
     <lastmod>2016-10-11T12:58:10.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>/2016/10/09/editorconfig/</loc>
-    
-    <lastmod>2016-10-11T11:57:12.000Z</lastmod>
     
   </url>
   
