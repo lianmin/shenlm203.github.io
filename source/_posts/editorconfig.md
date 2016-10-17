@@ -1,8 +1,8 @@
 ---
 title: editorconfig 使用
-date: 2016-10-09 20:13:06
+date: 2016-10-16 13:24:12
 categories: Web前端
-tags: 
+tags:
     - editorconfig
     - 代码质量
 ---
@@ -13,7 +13,7 @@ tags:
 
 Editorconfig是一款帮助开发者在不同编辑器或IDE之间定义和保持代码风格的工具。它包含了两部分内容：代码风格规则定义&支持此规则的一系列编辑器插件。
 
-本文根据[editorconfig](http://editorconfig.org/)官网的内容，结合常规开发所能遇到的情况，为大家介绍一下其用法。
+本文根据[editorconfig](http://editorconfig.org/)官网的内容，结合常规开发所能遇到的情况，为大家介绍一下其用法
 
 # Editorconfig的特点:
 
@@ -26,29 +26,29 @@ Editorconfig是一款帮助开发者在不同编辑器或IDE之间定义和保�
 
 ## 1.通配符匹配规则
 
-![](http://img2.tbcdn.cn/L1/461/1/8ff064efe987e13471cf8b58b48a0c2aa8c65390)
+![](/assets/img/1.png)
 
 - [] 匹配规则是从当前目录算起;
-  
+
 - ?只能匹配且必须有    如`f1.js`、`f2.js`、`f12.js`通过f??.js只能匹配到 `f12.js`，而f**.js可以匹配到所有;
-  
+
 - {s1,s2,s3}之间不能有空格。[{f1.js, f2.js, f3.js}] 无法匹配`f2.js`,`f3.js`;
-  
+
 - `*`和`**`可以匹配空字符串   如`f*.js`可以匹配`f.js`
-  
+
 - 多个匹配之间的规则如果不冲突是可以合并的
-  
+
 - 优先级问题（有点类似于css ）
-  
+
     如果两个匹配所定义的规则冲突，则会以最靠近打开文件的`.editorconfig`文件为准;
-  
+
     如果同一个文件中匹配定义冲突，则会以最后定义的为准。所以在定义规则的时候，须先定义通用规则，后定义特殊规则。
-  
+
 
 
 ## 2.支持属性
 
-![](http://img2.tbcdn.cn/L1/461/1/2164cf30b5e2dd3413dabe440abcf0dc135d6fd4)
+![](/assets/img/2.png)
 
     注：
 
@@ -64,17 +64,17 @@ Editorconfig是一款帮助开发者在不同编辑器或IDE之间定义和保�
 
 # 常用IDE下载链接
 
-- Notepad++:        https://github.com/editorconfig/editorconfig-notepad-plus-plus#readme 
-- Sublime Text:     https://github.com/sindresorhus/editorconfig-sublime#readme 
-- jetBrains:        https://github.com/editorconfig/editorconfig-jetbrains#readme 
-- Vim:              https://github.com/editorconfig/editorconfig-vim#readme 
-- TextMate:         https://github.com/Mr0grog/editorconfig-textmate#readme 
+- Notepad++:        https://github.com/editorconfig/editorconfig-notepad-plus-plus#readme
+- Sublime Text:     https://github.com/sindresorhus/editorconfig-sublime#readme
+- jetBrains:        https://github.com/editorconfig/editorconfig-jetbrains#readme
+- Vim:              https://github.com/editorconfig/editorconfig-vim#readme
+- TextMate:         https://github.com/Mr0grog/editorconfig-textmate#readme
 - Code::Blocks:     https://github.com/editorconfig/editorconfig-codeblocks#readme
 
 
 支持的所有编辑器列表：
 
-![](http://img1.tbcdn.cn/L1/461/1/489199d957111c45266a70bcaadd6c7948fc3874)
+![](/assets/img/3.png)
 
 # 安装举例
 
@@ -82,11 +82,11 @@ Editorconfig是一款帮助开发者在不同编辑器或IDE之间定义和保�
 
 1.打开settings->plugins
 
-![](http://img1.tbcdn.cn/L1/461/1/a1604177cd0809806e7955a31819bbd725ac80d6)
+![](/assets/img/4.png)
 
 2.选择从本地磁盘安装
 
-![](http://img3.tbcdn.cn/L1/461/1/561e88eabc007dbfa0e02b5a7bd7ed9c3d1ab614)
+![](/assets/img/5.png)
 
 3.选择安装插件[见附件]
 
@@ -94,7 +94,7 @@ Editorconfig是一款帮助开发者在不同编辑器或IDE之间定义和保�
 
 通过`package control` 输入 editorcofnig 查找安装即可
 
-![](http://img4.tbcdn.cn/L1/461/1/337f656447eb81ee0a7f24e3e15cb52171d65ff4)
+![](/assets/img/6.png)
 
 
 
@@ -102,7 +102,7 @@ Editorconfig是一款帮助开发者在不同编辑器或IDE之间定义和保�
 
 1.打开插件管理
 
-![](http://img3.tbcdn.cn/L1/461/1/f8f4c685688183d5f08b2002b94e036aa0eb4dc8)
+![](/assets/img/7.png)
 
 2.找到`editorconfig`,直接安装即可
 
@@ -116,8 +116,8 @@ Editorconfig是一款帮助开发者在不同编辑器或IDE之间定义和保�
     # 根据不同的开发IDE或编辑器统一代码风格
     # 详情见 editorconfig.org
     root = true
-    
-    
+
+
     [*]
     end_of_line = lf
     charset = utf-8

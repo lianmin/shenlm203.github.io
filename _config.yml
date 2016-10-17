@@ -5,8 +5,8 @@
 # Site
 title: 山河小记
 subtitle: 专业、激情、勤奋、坚持
-description: 联民的前端博客
-author: 联民
+author: 联民的小站
+description: 专业、激情、勤奋、坚持
 email: 406400939@qq.com
 
 language: zh-Hans
@@ -36,7 +36,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -82,11 +82,5 @@ deploy:
   repo: git@github.com:shenlm203/shenlm203.github.io.git
   branch: master
 
+
 plugins: #插件，例如生成 RSS 和站点地图的
-#- hexo-generator-feed
-#- hexo-generator-sitemap
-#
-#
-#html_minifier:
-#  enable: true    
-#  exclude: 
