@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/2016/10/19/webpack-settings/</loc>
+    
+    <lastmod>2016-10-18T16:26:33.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>/2016/10/09/hexo-gulpfile/</loc>
     
     <lastmod>2016-10-16T05:26:09.000Z</lastmod>
