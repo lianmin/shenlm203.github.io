@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="editorconfig,代码质量," />
+  <meta name="keywords" content="git," />
 
 
 
@@ -90,30 +90,30 @@
 
 
 
-<meta name="description" content="介绍由于团队成员开发经历、熟悉的编辑器及开发习惯等的不同，在协作开发的时候往往会遇到许多因代码风格而引起的尴尬问题。比如，协作开发过程中各成员之间代码一致，只是因tab缩进，行尾换行符，多余空格等而差异导致VCS产生了冲突。
-Editorconfig是一款帮助开发者在不同编辑器或IDE之间定义和保持代码风格的工具。它包含了两部分内容：代码风格规则定义&amp;amp;支持此规则的一系列编辑器插件。
-本文根">
+<meta name="description" content="Git目前已经成为大量程序员管理项目版本的工具，程序猿在开发代码的时候， 总是希望做到沉浸式开发，不希望过多的事儿打扰。 而我们在使用Git作为版本办理工具进行开发的时候， 通常会遇到的情况是：需要频繁地在本地终端和线上git上进行切换。
+试想一下如下场景，是否经常让人抓狂：
+
+本地push了一次新的提交，需要看看线上是否更新了
+我刚接受一个项目，项目名很长，很难记， 每次要查看项目主页，地址好难">
 <meta property="og:type" content="article">
-<meta property="og:title" content="editorconfig 使用">
-<meta property="og:url" content="/2016/10/16/editorconfig/index.html">
+<meta property="og:title" content="配置git open命令快速打开Git项目主页">
+<meta property="og:url" content="/2016/10/24/git-open/index.html">
 <meta property="og:site_name" content="山河小记">
-<meta property="og:description" content="介绍由于团队成员开发经历、熟悉的编辑器及开发习惯等的不同，在协作开发的时候往往会遇到许多因代码风格而引起的尴尬问题。比如，协作开发过程中各成员之间代码一致，只是因tab缩进，行尾换行符，多余空格等而差异导致VCS产生了冲突。
-Editorconfig是一款帮助开发者在不同编辑器或IDE之间定义和保持代码风格的工具。它包含了两部分内容：代码风格规则定义&amp;amp;支持此规则的一系列编辑器插件。
-本文根">
-<meta property="og:image" content="/assets/img/1.png">
-<meta property="og:image" content="/assets/img/2.png">
-<meta property="og:image" content="/assets/img/3.png">
-<meta property="og:image" content="/assets/img/4.png">
-<meta property="og:image" content="/assets/img/5.png">
-<meta property="og:image" content="/assets/img/6.png">
-<meta property="og:image" content="/assets/img/7.png">
-<meta property="og:updated_time" content="2016-10-16T05:24:36.000Z">
+<meta property="og:description" content="Git目前已经成为大量程序员管理项目版本的工具，程序猿在开发代码的时候， 总是希望做到沉浸式开发，不希望过多的事儿打扰。 而我们在使用Git作为版本办理工具进行开发的时候， 通常会遇到的情况是：需要频繁地在本地终端和线上git上进行切换。
+试想一下如下场景，是否经常让人抓狂：
+
+本地push了一次新的提交，需要看看线上是否更新了
+我刚接受一个项目，项目名很长，很难记， 每次要查看项目主页，地址好难">
+<meta property="og:image" content="http://p1.bpimg.com/567571/c9e3660df0dff2ed.png">
+<meta property="og:updated_time" content="2016-10-24T12:50:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="editorconfig 使用">
-<meta name="twitter:description" content="介绍由于团队成员开发经历、熟悉的编辑器及开发习惯等的不同，在协作开发的时候往往会遇到许多因代码风格而引起的尴尬问题。比如，协作开发过程中各成员之间代码一致，只是因tab缩进，行尾换行符，多余空格等而差异导致VCS产生了冲突。
-Editorconfig是一款帮助开发者在不同编辑器或IDE之间定义和保持代码风格的工具。它包含了两部分内容：代码风格规则定义&amp;amp;支持此规则的一系列编辑器插件。
-本文根">
-<meta name="twitter:image" content="/assets/img/1.png">
+<meta name="twitter:title" content="配置git open命令快速打开Git项目主页">
+<meta name="twitter:description" content="Git目前已经成为大量程序员管理项目版本的工具，程序猿在开发代码的时候， 总是希望做到沉浸式开发，不希望过多的事儿打扰。 而我们在使用Git作为版本办理工具进行开发的时候， 通常会遇到的情况是：需要频繁地在本地终端和线上git上进行切换。
+试想一下如下场景，是否经常让人抓狂：
+
+本地push了一次新的提交，需要看看线上是否更新了
+我刚接受一个项目，项目名很长，很难记， 每次要查看项目主页，地址好难">
+<meta name="twitter:image" content="http://p1.bpimg.com/567571/c9e3660df0dff2ed.png">
 
 
 
@@ -134,10 +134,10 @@ Editorconfig是一款帮助开发者在不同编辑器或IDE之间定义和保�
 
 
 
-  <link rel="canonical" href="/2016/10/16/editorconfig/"/>
+  <link rel="canonical" href="/2016/10/24/git-open/"/>
 
 
-  <title> editorconfig 使用 | 山河小记 </title>
+  <title> 配置git open命令快速打开Git项目主页 | 山河小记 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -296,7 +296,7 @@ Editorconfig是一款帮助开发者在不同编辑器或IDE之间定义和保�
             
             
               
-                editorconfig 使用
+                配置git open命令快速打开Git项目主页
               
             
           </h1>
@@ -308,8 +308,8 @@ Editorconfig是一款帮助开发者在不同编辑器或IDE之间定义和保�
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-16T13:24:12+08:00" content="2016-10-16">
-              2016-10-16
+            <time itemprop="dateCreated" datetime="2016-10-24T20:49:00+08:00" content="2016-10-24">
+              2016-10-24
             </time>
           </span>
 
@@ -322,8 +322,8 @@ Editorconfig是一款帮助开发者在不同编辑器或IDE之间定义和保�
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Web前端/" itemprop="url" rel="index">
-                    <span itemprop="name">Web前端</span>
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
                   </a>
                 </span>
 
@@ -338,8 +338,8 @@ Editorconfig是一款帮助开发者在不同编辑器或IDE之间定义和保�
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/10/16/editorconfig/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/16/editorconfig/" itemprop="commentsCount"></span>
+                <a href="/2016/10/24/git-open/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/24/git-open/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -367,78 +367,38 @@ Editorconfig是一款帮助开发者在不同编辑器或IDE之间定义和保�
       
 
       
-        <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>由于团队成员开发经历、熟悉的编辑器及开发习惯等的不同，在协作开发的时候往往会遇到许多因代码风格而引起的尴尬问题。比如，协作开发过程中各成员之间代码一致，只是因tab缩进，行尾换行符，多余空格等而差异导致VCS产生了冲突。</p>
-<p>Editorconfig是一款帮助开发者在不同编辑器或IDE之间定义和保持代码风格的工具。它包含了两部分内容：代码风格规则定义&amp;支持此规则的一系列编辑器插件。</p>
-<p>本文根据<a href="http://editorconfig.org/" target="_blank" rel="external">editorconfig</a>官网的内容，结合常规开发所能遇到的情况，为大家介绍一下其用法</p>
-<h1 id="Editorconfig的特点"><a href="#Editorconfig的特点" class="headerlink" title="Editorconfig的特点:"></a>Editorconfig的特点:</h1><ul>
-<li>支持一套统一的代码风格</li>
-<li>跨编辑器</li>
-<li>配置简单、快捷</li>
-</ul>
-<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h2 id="1-通配符匹配规则"><a href="#1-通配符匹配规则" class="headerlink" title="1.通配符匹配规则"></a>1.通配符匹配规则</h2><p><img src="/assets/img/1.png" alt=""></p>
+        <p><code>Git</code>目前已经成为大量程序员管理项目版本的工具，程序猿在开发代码的时候， 总是希望做到沉浸式开发，不希望过多的事儿打扰。 而我们在使用Git作为版本办理工具进行开发的时候， 通常会遇到的情况是：需要频繁地在本地终端和线上git上进行切换。</p>
+<p>试想一下如下场景，是否经常让人抓狂：</p>
 <ul>
-<li><p>[] 匹配规则是从当前目录算起;</p>
-</li>
-<li><p>?只能匹配且必须有    如<code>f1.js</code>、<code>f2.js</code>、<code>f12.js</code>通过f??.js只能匹配到 <code>f12.js</code>，而f**.js可以匹配到所有;</p>
-</li>
-<li><p>{s1,s2,s3}之间不能有空格。[{f1.js, f2.js, f3.js}] 无法匹配<code>f2.js</code>,<code>f3.js</code>;</p>
-</li>
-<li><p><code>*</code>和<code>**</code>可以匹配空字符串   如<code>f*.js</code>可以匹配<code>f.js</code></p>
-</li>
-<li><p>多个匹配之间的规则如果不冲突是可以合并的</p>
-</li>
-<li><p>优先级问题（有点类似于css ）</p>
-<p>  如果两个匹配所定义的规则冲突，则会以最靠近打开文件的<code>.editorconfig</code>文件为准;</p>
-<p>  如果同一个文件中匹配定义冲突，则会以最后定义的为准。所以在定义规则的时候，须先定义通用规则，后定义特殊规则。</p>
-</li>
+<li>本地push了一次新的提交，需要看看线上是否更新了</li>
+<li>我刚接受一个项目，项目名很长，很难记， 每次要查看项目主页，地址好难敲, 如：<a href="http://gitlab.xxx.com/group-xxx/project-xxx" target="_blank" rel="external">http://gitlab.xxx.com/group-xxx/project-xxx</a></li>
+<li>…</li>
 </ul>
-<h2 id="2-支持属性"><a href="#2-支持属性" class="headerlink" title="2.支持属性"></a>2.支持属性</h2><p><img src="/assets/img/2.png" alt=""></p>
-<pre><code>注：
+<p>那么，<code>git-open</code>命令可以解决你的大部分烦恼。</p>
+<p>我们期望的方式： 在终端的项目文件夹内， 通过一条命令， 可以直接唤起浏览器打开本地git项目对应的远程项目主页。经本人测试， <a href="https://www.npmjs.com/package/git-open" target="_blank" rel="external">git-open</a>可以满足我们的需求。</p>
+<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p>在项目文件夹下， 直接运行:</p>
+<blockquote>
+<p>git open</p>
+</blockquote>
+<p>打开效果：<br><img src="http://p1.bpimg.com/567571/c9e3660df0dff2ed.png" alt=""></p>
+<p>是不是很流畅啊， 再也不用傻子似的打开浏览器凭着自己惊人的记忆力输项目地址了。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>首先，你需要安装<code>node</code>， <code>git</code>， <code>oh-my-zsh</code>先。 前两者不用介绍了， 安装自己Google（还是不要百度了）。<code>oh-my-zsh</code>安装参考：<a href="http://ohmyz.sh/" target="_blank" rel="external">oh-my-zsh官网</a>,  <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH" target="_blank" rel="external">安装文档</a></p>
+<h3 id="步骤如下"><a href="#步骤如下" class="headerlink" title="步骤如下"></a>步骤如下</h3><p>1.安装<code>git-open</code></p>
+<blockquote>
+<p>(sudo) npm i git-open -g</p>
+</blockquote>
+<p>2.注册 git-open 命令到<code>~/.zshrc</code>文件夹下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)</div><div class="line"># Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/</div><div class="line"># Example format: plugins=(rails git textmate ruby lighthouse)</div><div class="line"># Add wisely, as too many plugins slow down shell startup.</div><div class="line">plugins=(git git-open)</div></pre></td></tr></table></figure>
+<p>3.如果你的项目是gitlab项目， 那么在项目根目录文件夹下，执行如下命令：</p>
+<blockquote>
+<p>git config [–global] gitopen.gitlab.domain gilab.xxx.com</p>
+</blockquote>
+<p>4.进入项目目录，执行</p>
+<blockquote>
+<p>git open </p>
+</blockquote>
+<p>done！</p>
 
-1.所有属性设置大小写敏感，使用小写；
-
-2.`.editorconfig`文件的使用规则：
-
-    当打开一个文件的时候，IDE中安装的Editorconfig组件会在当前文件目录以及其父目录查找.editorconfig文件。当到达根目录或者查找到一个editorconfig文件中root=true时，停止查找。
-
-    查找顺序从根目录（或root=true文件夹）到当前目录，最接近当前打开文件的.editorconfig会最后被读取，这些文件中所设置的属性越靠近当前打开文件，优先级越高
-
-3.Windows中由于扩展规则限制，可通过输入&apos;.editorconfig.&apos;生成配置文件
-</code></pre><h1 id="常用IDE下载链接"><a href="#常用IDE下载链接" class="headerlink" title="常用IDE下载链接"></a>常用IDE下载链接</h1><ul>
-<li>Notepad++:        <a href="https://github.com/editorconfig/editorconfig-notepad-plus-plus#readme" target="_blank" rel="external">https://github.com/editorconfig/editorconfig-notepad-plus-plus#readme</a></li>
-<li>Sublime Text:     <a href="https://github.com/sindresorhus/editorconfig-sublime#readme" target="_blank" rel="external">https://github.com/sindresorhus/editorconfig-sublime#readme</a></li>
-<li>jetBrains:        <a href="https://github.com/editorconfig/editorconfig-jetbrains#readme" target="_blank" rel="external">https://github.com/editorconfig/editorconfig-jetbrains#readme</a></li>
-<li>Vim:              <a href="https://github.com/editorconfig/editorconfig-vim#readme" target="_blank" rel="external">https://github.com/editorconfig/editorconfig-vim#readme</a></li>
-<li>TextMate:         <a href="https://github.com/Mr0grog/editorconfig-textmate#readme" target="_blank" rel="external">https://github.com/Mr0grog/editorconfig-textmate#readme</a></li>
-<li>Code::Blocks:     <a href="https://github.com/editorconfig/editorconfig-codeblocks#readme" target="_blank" rel="external">https://github.com/editorconfig/editorconfig-codeblocks#readme</a></li>
-</ul>
-<p>支持的所有编辑器列表：</p>
-<p><img src="/assets/img/3.png" alt=""></p>
-<h1 id="安装举例"><a href="#安装举例" class="headerlink" title="安装举例"></a>安装举例</h1><h2 id="jetbrains-包括Intellij-IDEA-和-webstrom-安装"><a href="#jetbrains-包括Intellij-IDEA-和-webstrom-安装" class="headerlink" title="jetbrains (包括Intellij IDEA 和 webstrom) 安装"></a>jetbrains (包括Intellij IDEA 和 webstrom) 安装</h2><p>1.打开settings-&gt;plugins</p>
-<p><img src="/assets/img/4.png" alt=""></p>
-<p>2.选择从本地磁盘安装</p>
-<p><img src="/assets/img/5.png" alt=""></p>
-<p>3.选择安装插件[见附件]</p>
-<h2 id="sublime-text安装"><a href="#sublime-text安装" class="headerlink" title="sublime text安装"></a>sublime text安装</h2><p>通过<code>package control</code> 输入 editorcofnig 查找安装即可</p>
-<p><img src="/assets/img/6.png" alt=""></p>
-<h2 id="notepad-安装"><a href="#notepad-安装" class="headerlink" title="notepad ++ 安装"></a>notepad ++ 安装</h2><p>1.打开插件管理</p>
-<p><img src="/assets/img/7.png" alt=""></p>
-<p>2.找到<code>editorconfig</code>,直接安装即可</p>
-<h1 id="editor配置示例"><a href="#editor配置示例" class="headerlink" title="editor配置示例"></a>editor配置示例</h1><p>将.editorconfig文件(内容如下)放到项目根目录，并且对自己的IDE安装相应支持的插件即可。</p>
-<pre><code># editorconfig文件定义一致的code style规范
-# 根据不同的开发IDE或编辑器统一代码风格
-# 详情见 editorconfig.org
-root = true
-
-
-[*]
-end_of_line = lf
-charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = true
-indent_style = space
-indent_size = 4
-</code></pre>
       
     </div>
 
@@ -460,9 +420,7 @@ indent_size = 4
       
         <div class="post-tags">
           
-            <a href="/tags/editorconfig/" rel="tag">#editorconfig</a>
-          
-            <a href="/tags/代码质量/" rel="tag">#代码质量</a>
+            <a href="/tags/git/" rel="tag">#git</a>
           
         </div>
       
@@ -471,17 +429,13 @@ indent_size = 4
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/09/hexo-gulpfile/" rel="next" title="优化hexo的发布代码">
-                <i class="fa fa-chevron-left"></i> 优化hexo的发布代码
+              <a href="/2016/10/19/webpack-settings/" rel="next" title="webpack常用配置详解">
+                <i class="fa fa-chevron-left"></i> webpack常用配置详解
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/10/19/webpack-settings/" rel="prev" title="webpack常用配置详解">
-                webpack常用配置详解 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -507,8 +461,8 @@ indent_size = 4
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/10/16/editorconfig/"
-           data-title="editorconfig 使用" data-url="/2016/10/16/editorconfig/">
+      <div class="ds-thread" data-thread-key="2016/10/24/git-open/"
+           data-title="配置git open命令快速打开Git项目主页" data-url="/2016/10/24/git-open/">
       </div>
     
   </div>
@@ -626,7 +580,7 @@ indent_size = 4
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Editorconfig的特点"><span class="nav-number">2.</span> <span class="nav-text">Editorconfig的特点:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置"><span class="nav-number">3.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-通配符匹配规则"><span class="nav-number">3.1.</span> <span class="nav-text">1.通配符匹配规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-支持属性"><span class="nav-number">3.2.</span> <span class="nav-text">2.支持属性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常用IDE下载链接"><span class="nav-number">4.</span> <span class="nav-text">常用IDE下载链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装举例"><span class="nav-number">5.</span> <span class="nav-text">安装举例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#jetbrains-包括Intellij-IDEA-和-webstrom-安装"><span class="nav-number">5.1.</span> <span class="nav-text">jetbrains (包括Intellij IDEA 和 webstrom) 安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sublime-text安装"><span class="nav-number">5.2.</span> <span class="nav-text">sublime text安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#notepad-安装"><span class="nav-number">5.3.</span> <span class="nav-text">notepad ++ 安装</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#editor配置示例"><span class="nav-number">6.</span> <span class="nav-text">editor配置示例</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#效果"><span class="nav-number">1.</span> <span class="nav-text">效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#步骤如下"><span class="nav-number">2.1.</span> <span class="nav-text">步骤如下</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

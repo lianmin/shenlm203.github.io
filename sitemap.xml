@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/2016/10/24/git-open/</loc>
+    
+    <lastmod>2016-10-24T12:50:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>/2016/10/19/webpack-settings/</loc>
     
     <lastmod>2016-10-18T16:58:14.000Z</lastmod>
