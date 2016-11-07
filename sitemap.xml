@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/2016/10/30/time-in-javascript/</loc>
+    
+    <lastmod>2016-11-07T17:04:03.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>/2016/10/24/git-open/</loc>
     
     <lastmod>2016-10-24T12:50:22.000Z</lastmod>
